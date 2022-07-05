@@ -1,1 +1,30 @@
+---
+ - hosts: web
+   become: true
+   vars_prompt:
+     - name: "file"
+       prompt: "enter file name"
+       private: no
+     - name: "mode"
+       prompt: "enter mode"
+       private: no
+     - name: "date"
+       prompt: "enter date"
+       private: no
+     - name: "directory"
+       prompt: "enter directory name"
+       private: no
+   tasks:
+     - name: create a directory
+       file:
+         path: /home/slave1/{{ directory }}_{{ date }}
+         state: directory
+         mode: '{{ mode }}'
+     - name: create a file
+       file:
+         path: /home/slave1/{{ directory }}_{{ date }}/{{ file }}_{{ date }}
+         state: touch
+         mode: '{{ mode }}'
+
+
 
