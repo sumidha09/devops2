@@ -1,0 +1,5 @@
+---
+ - hosts: localhost
+   connection: yes
+   tasks:
+     - ping:
