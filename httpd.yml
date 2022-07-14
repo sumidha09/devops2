@@ -1,0 +1,14 @@
+---
+ - hosts: localhost
+   become: true
+   tasks:
+     - name: installing apache2
+       yum:
+         name: httpd
+         state: installed
+     - name: start the service
+       service:
+         name: httpd
+         state: started
+       
+         
