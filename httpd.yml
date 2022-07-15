@@ -1,5 +1,5 @@
 ---
- - hosts: slave1
+ - hosts: demo
    become: true
    tasks:
      - name: installing apache2
