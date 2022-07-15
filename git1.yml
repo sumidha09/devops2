@@ -6,7 +6,7 @@
        yum:
          name: git
          state: installed
-     - name: start the service
+     - name: start the service git
        service:
          name: git
          state: started
