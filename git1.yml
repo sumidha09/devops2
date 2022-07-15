@@ -8,6 +8,6 @@
          state: installed
      - name: start the service
        service:
-         name: httpd
+         name: git
          state: started
       
