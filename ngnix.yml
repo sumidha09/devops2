@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   become: true
+   tasks:
+     - name: install epel-release for ngnix
+       yum:
+         name: epel-release
+         state: installed
+     - name: installing  ngnix
+       yum:
+         name: nginx
+         state: installed
